@@ -1,7 +1,7 @@
 <script context="module">
     export async function load({fetch}) {
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-        const games = await res.json();
+        const res = await fetch('/games.json');
+        const {games} = await res.json();
         
         if(res.ok){
             return {
